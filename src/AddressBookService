@@ -32,4 +32,34 @@ mysql> show databases;
 +--------------------+
 9 rows in set (0.00 sec)
 
+=======================================================uc2====================================================
+mysql> use  addressbookservice;
+Database changed
+mysql> create table AddressBook
+    -> (
+    ->  first_name varchar(20) ,
+    ->  last_name  varchar(20) ,
+    -> address varchar(100) ,
+    -> city varchar(20) ,
+    -> state varchar(20) ,
+    -> zip int unsigned ,
+    -> phone_number int(10) ,
+    -> emai varchar(20) );
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+mysql> describe addressbook;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| first_name   | varchar(20)  | YES  |     | NULL    |       |
+| last_name    | varchar(20)  | YES  |     | NULL    |       |
+| address      | varchar(100) | YES  |     | NULL    |       |
+| city         | varchar(20)  | YES  |     | NULL    |       |
+| state        | varchar(20)  | YES  |     | NULL    |       |
+| zip          | int unsigned | YES  |     | NULL    |       |
+| phone_number | int          | YES  |     | NULL    |       |
+| emai         | varchar(20)  | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
 mysql>
+
