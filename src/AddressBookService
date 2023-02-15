@@ -109,6 +109,19 @@ mysql> select * from addressbook;
 | Deepa      | Suryavanshi | Haryana   | Hisar     | Haryana | 110043 |    634551235 | deepa@gmail.com   |
 +------------+-------------+-----------+-----------+---------+--------+--------------+-------------------+
 3 rows in set (0.00 sec)
+======================================================================================uc5=================================
+
+mysql> delete from addressbook where first_name='Usha';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from addressbook;
++------------+-------------+---------+-----------+---------+--------+--------------+-------------------+
+| first_name | last_name   | address | city      | state   | zip    | phone_number | email             |
++------------+-------------+---------+-----------+---------+--------+--------------+-------------------+
+| Priyesh    | Kumar       | Noida   | Secter-12 | UP      | 110023 |    678554675 | priyesh@gmail.com |
+| Deepa      | Suryavanshi | Haryana | Hisar     | Haryana | 110043 |    634551235 | deepa@gmail.com   |
++------------+-------------+---------+-----------+---------+--------+--------------+-------------------+
+2 rows in set (0.00 sec)
 
 mysql>
 
