@@ -60,6 +60,26 @@ mysql> describe addressbook;
 | emai         | varchar(20)  | YES  |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
+=============================================================================================uc3============================
+
+mysql> INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,emai)VALUES ('Priyesh', 'Kumar', 'Noida', 'Secter-12', 'UP',110023,678554675, 'priyesh@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,emai)VALUES ('Usha', 'Ahirwar', 'New Delhi', 'Rohini', 'Delhi',110023,634554675, 'ushah@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,emai)VALUES ('Deepa', 'Suryavanshi', 'Haryana', 'Hisar', 'Haryana',110043,634551235, 'deepa@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from addressbook;
++------------+-------------+-----------+-----------+---------+--------+--------------+-------------------+
+| first_name | last_name   | address   | city      | state   | zip    | phone_number | emai              |
++------------+-------------+-----------+-----------+---------+--------+--------------+-------------------+
+| Priyesh    | Kumar       | Noida     | Secter-12 | UP      | 110023 |    678554675 | priyesh@gmail.com |
+| Usha       | Ahirwar     | New Delhi | Rohini    | Delhi   | 110023 |    634554675 | ushah@gmail.com   |
+| Deepa      | Suryavanshi | Haryana   | Hisar     | Haryana | 110043 |    634551235 | deepa@gmail.com   |
++------------+-------------+-----------+-----------+---------+--------+--------------+-------------------+
+3 rows in set (0.00 sec)
 
 mysql>
 
