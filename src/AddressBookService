@@ -217,6 +217,27 @@ mysql> select count(first_name) from addressbook;
 |                 3 |
 +-------------------+
 1 row in set (0.00 sec)
+==================================================================================================uc11======================
+
+mysql> INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,email,type)
+    -> VALUES ('imran', 'sir', 'Brea51', 'Barimnagar', 'Bs',505002,956554875, 'mentor@gmail.com','friend');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO addressbook (first_name, last_name, Address, City, State,zip,phone_number,email,type)
+    -> VALUES ('prince', 'sir', 'Brea51', 'Barimnagar', 'Bs',505002,956554875, 'sir@gmail.com','family');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from AddressBook;
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| first_name | last_name   | address | city       | state   | zip    | phone_number | email             | type   |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| Priyesh    | Kumar       | Noida   | Secter-12  | UP      | 110023 |    678554675 | priyesh@gmail.com | NULL   |
+| Deepa      | Suryavanshi | Haryana | Hisar      | Haryana | 110043 |    634551235 | deepa@gmail.com   | family |
+| hari       | krishna     | Brea51  | Barimnagar | Bs      | 505002 |    956554875 | hari@gmail.com    | friend |
+| imran      | sir         | Brea51  | Barimnagar | Bs      | 505002 |    956554875 | mentor@gmail.com  | friend |
+| prince     | sir         | Brea51  | Barimnagar | Bs      | 505002 |    956554875 | sir@gmail.com     | family |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+5 rows in set (0.00 sec)
 
 mysql>
 
