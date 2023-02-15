@@ -173,6 +173,42 @@ mysql> select * from addressbook where city="Hisar" order by first_name;
 | Deepa      | Suryavanshi | Haryana | Hisar | Haryana | 110043 |    634551235 | deepa@gmail.com |
 +------------+-------------+---------+-------+---------+--------+--------------+-----------------+
 1 row in set (0.00 sec)
+=================================================================================================uc9=========================================
+
+mysql> ALTER TABLE AddressBook
+    -> ADD type varchar(25);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update addressbook set type='friend' where first_name ='hari' or first_name='chari';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook;
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| first_name | last_name   | address | city       | state   | zip    | phone_number | email             | type   |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| Priyesh    | Kumar       | Noida   | Secter-12  | UP      | 110023 |    678554675 | priyesh@gmail.com | NULL   |
+| Deepa      | Suryavanshi | Haryana | Hisar      | Haryana | 110043 |    634551235 | deepa@gmail.com   | NULL   |
+| hari       | krishna     | Brea51  | Barimnagar | Bs      | 505002 |    956554875 | hari@gmail.com    | friend |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+3 rows in set (0.00 sec)
+
+mysql> update addressbook set type='family' where first_name ='Deepa';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook;
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| first_name | last_name   | address | city       | state   | zip    | phone_number | email             | type   |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+| Priyesh    | Kumar       | Noida   | Secter-12  | UP      | 110023 |    678554675 | priyesh@gmail.com | NULL   |
+| Deepa      | Suryavanshi | Haryana | Hisar      | Haryana | 110043 |    634551235 | deepa@gmail.com   | family |
+| hari       | krishna     | Brea51  | Barimnagar | Bs      | 505002 |    956554875 | hari@gmail.com    | friend |
++------------+-------------+---------+------------+---------+--------+--------------+-------------------+--------+
+3 rows in set (0.00 sec)
+
+mysql>
 
 
 
